@@ -14,12 +14,27 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'list.html',
 })
 export class ListPage {
+  items : any[];
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	// console.log(navParams);
+  	
   }
 
   ionViewDidLoad() {
+  	this.items=this.navParams.data;
+  	console.log(this.items);
+
     console.log('ionViewDidLoad ListPage');
+  }
+
+  trading(item){
+  	let data = item;
+  	this.navCtrl.push("TradingPage",data);
+  }
+  selling(item){
+  	let data = item;
+  	this.navCtrl.push("SellingPage",data);
   }
 
 }

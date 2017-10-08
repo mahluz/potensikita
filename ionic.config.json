@@ -1,6 +1,8 @@
 {
   "name": "potensikita-0.0.1",
-  "app_id": "",
+  "app_id": "6fc7096d",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

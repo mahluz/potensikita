@@ -14,5 +14,27 @@
 
 
 <ion-content padding>
+	<ion-card *ngFor="let item of items">
+		<ion-item>
+			<img [src]="item.photo" alt="">
+			<h2>{{item.title}}</h2>
+			<p>{{item.description}}</p>
 
+			<ion-grid>
+				<ion-row>
+					<ion-col>
+						<button ion-button icon-basket block (click)="trading(item)">
+							<ion-icon name="basket"></ion-icon> Trading
+						</button>
+					</ion-col>
+					<ion-col>
+						<button ion-button icon-cash block (click)="selling(item)">
+							<ion-icon name="cash"></ion-icon> Penjualan
+						</button>
+					</ion-col>
+				</ion-row>
+			</ion-grid>
+
+		</ion-item>
+	</ion-card>
 </ion-content>
